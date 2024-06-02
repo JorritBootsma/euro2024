@@ -44,7 +44,8 @@ if uploaded_files:
     st.write("DataFrame from the uploaded files:")
     st.dataframe(result_df)
 
-    st.button(
-        "Save to Excel",
-        on_click=lambda: result_df.to_excel("euro_data.xlsx", index=False)
-    )
+    # Doesn't work in the deployed app:
+    # st.button(
+    #     "Save to Excel",
+    #     on_click=lambda: result_df.to_excel("euro_data.xlsx", index=False)
+    # )

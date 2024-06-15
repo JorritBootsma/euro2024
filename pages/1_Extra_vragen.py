@@ -4,6 +4,8 @@ import streamlit as st
 from utils.general import get_question_cols
 from utils.plotters import bar_chart
 
+st.title('Verdeling vragen')
+
 df = pd.read_excel("EuroMaster.xlsm")
 
 questions = get_question_cols(df)

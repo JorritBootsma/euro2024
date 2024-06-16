@@ -10,7 +10,12 @@ df = pd.read_excel("EuroMaster.xlsm")
 
 questions = get_question_cols(df)
 
-question = st.selectbox('Select a question:', questions)
+question = st.selectbox('Selecteer een vraag:', questions)
 
-fig = bar_chart(df.iloc[:63], question, 'Naam', x_axis_label="Antwoorden")
+first_in_standings = st.selectbox('Wie staat er bovenaan?', df["Naam"].dropna().tolist(), index=None)
+score_of_first_in_standings = None
+if first_in_standings:
+    score_of_first_in_standings = df[df["Naam"] == first_in_standings][question].values[0]
+
+fig = bar_chart(df.iloc[:63], question, 'Naam', x_axis_label="Antwoorden", score_of_first_in_standings=score_of_first_in_standings)
 st.plotly_chart(fig)

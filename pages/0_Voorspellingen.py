@@ -18,5 +18,5 @@ st.title('Verdeling voorspellingen')
 # Dropdown menu for match selection
 match = st.selectbox('Select a match:', match_cols)
 
-fig = bar_chart(df, match, 'Naam')
+fig = bar_chart(df, match, names_column_name="Naam", x_axis_label="Score")
 st.plotly_chart(fig)

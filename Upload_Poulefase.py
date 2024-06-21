@@ -3,6 +3,8 @@ import itertools
 import pandas as pd
 import streamlit as st
 
+st.title("Poulefase")
+
 uploaded_files = st.file_uploader("Upload Excel files", type="xlsx", accept_multiple_files=True)
 
 if uploaded_files:

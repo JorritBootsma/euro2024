@@ -10,7 +10,7 @@ match_cols = get_match_cols(df)
 df_match_scores = df[match_cols].dropna()
 
 # Streamlit application
-st.title('Verdeling voorspellingen')
+st.title('Verdeling voorspellingen Poulefase')
 
 # Dropdown menu for match selection
 match = st.selectbox('Select a match:', match_cols)

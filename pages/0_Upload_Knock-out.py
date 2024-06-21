@@ -6,6 +6,8 @@ import streamlit as st
 
 from configs import configs
 
+st.title("Knock-outfase")
+
 uploaded_files = st.file_uploader("Upload Excel files", type="xlsx", accept_multiple_files=True)
 
 

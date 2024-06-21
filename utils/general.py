@@ -13,3 +13,7 @@ def get_question_cols(df: pd.DataFrame) -> list[str]:
 
     questions = [col for col in questions_with_extra if col not in unnamed_cols and col not in wrong_cols]
     return questions
+
+
+def rotate_left(lst, n):
+    return lst[n:] + lst[:n]
